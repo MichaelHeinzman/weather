@@ -1,16 +1,19 @@
-import React from 'react'
+import React from "react";
+import TextFormat from "../TextFormat";
 
-type Props = {    
-    description: string,
-    icon: string,
-    id: number,
-    main: string,
-}
+type Props = {
+  description: string;
+  icon: string;
+  id: number;
+  main: string;
+};
 
-const WeatherItem = ({description, icon, id, main}: Props) => {
+const WeatherItem = ({ description, icon, id, main }: Props) => {
   return (
-    <>Description: {description} icon: {icon} id: {id} main: {main}</>
-  )
-}
+    <TextFormat>
+      Description: {description} icon: {icon} id: {id} main: {main}
+    </TextFormat>
+  );
+};
 
-export default WeatherItem
+export default WeatherItem;

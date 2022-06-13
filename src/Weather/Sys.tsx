@@ -1,17 +1,21 @@
-import React from 'react'
+import React from "react";
+import TextFormat from "../TextFormat";
 
 type Props = {
-    country: string,
-    id: number,
-    sunrise: number,
-    sunset: number,
-    type: number,
-}
+  country: string;
+  id: number;
+  sunrise: number;
+  sunset: number;
+  type: number;
+};
 
-const Sys = ({country, id, sunrise, sunset, type}: Props) => {
+const Sys = ({ country, id, sunrise, sunset, type }: Props) => {
   return (
-    <div>Country: {country} id: {id} sunrise: {sunrise} sunset: {sunset} type: {type}</div>
-  )
-}
+    <TextFormat>
+      Country: {country} id: {id} sunrise: {sunrise} sunset: {sunset} type:{" "}
+      {type}
+    </TextFormat>
+  );
+};
 
-export default Sys
+export default Sys;

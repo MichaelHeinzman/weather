@@ -1,20 +1,25 @@
-import React from 'react'
-import WeatherItem from './WeatherItem'
+import React from "react";
+import TextFormat from "../TextFormat";
+import WeatherItem from "./WeatherItem";
 
-type item = {    
-    description: string,
-    icon: string,
-    id: number,
-    main: string,
-}
+type item = {
+  description: string;
+  icon: string;
+  id: number;
+  main: string;
+};
 
 type Props = {
-    weather: Array<item>
-}
-const WeatherDescription = ({weather}: Props) => {
+  weather: Array<item>;
+};
+const WeatherDescription = ({ weather }: Props) => {
   return (
-    <>{weather.map((item) => <WeatherItem {...item}/>)}</>
-  )
-}
+    <TextFormat>
+      {weather.map((item) => (
+        <WeatherItem {...item} />
+      ))}
+    </TextFormat>
+  );
+};
 
-export default WeatherDescription
+export default WeatherDescription;

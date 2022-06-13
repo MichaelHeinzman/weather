@@ -1,14 +1,17 @@
-import React from 'react'
+import React from "react";
+import TextFormat from "../TextFormat";
 
 type Props = {
-  lon: number,
-  lat: number,
-}
+  lon: number;
+  lat: number;
+};
 
-const Coordinates = ({lon, lat}: Props) => {
+const Coordinates = ({ lon, lat }: Props) => {
   return (
-    <>Longitude: {lon} Latitude: {lat}</>
-  )
-}
+    <TextFormat>
+      Longitude: {lon} Latitude: {lat}
+    </TextFormat>
+  );
+};
 
-export default Coordinates
+export default Coordinates;

@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import TextFormat from "../TextFormat";
 
-type Props = {deg: number, speed: number}
+type Props = { deg: number; speed: number };
 
-const Wind = ({deg, speed}: Props) => {
+const Wind = ({ deg, speed }: Props) => {
   return (
-    <div>Degree: {deg} Speed: {speed}</div>
-  )
-}
+    <TextFormat>
+      Degree: {deg} Speed: {speed}
+    </TextFormat>
+  );
+};
 
-export default Wind
+export default Wind;
