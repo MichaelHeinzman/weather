@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import useSWR from "swr";
+import SearchBar from '../SearchBar';
 import Clouds from './Clouds';
 import Coordinates from './Coordinates';
 import MainWeather from './MainWeather';
@@ -7,9 +8,7 @@ import Sys from './Sys';
 import WeatherDescription from './WeatherDescription';
 import Wind from './Wind';
 
-type Props = {}
 const apiKey = "4b43c4043d158edb52a7d1e45276c185";
-
 const weatherTemplate = {
     base: "",
     clouds: {all: 0},
@@ -25,11 +24,21 @@ const weatherTemplate = {
     weather: [{description: "broken clouds", icon: "04d", id: 803, main: "Clouds"}],
     wind: {deg: 0, speed: 0},
 }
+
 const Weather = () => {
     const [location, setLocation] = useState("Florida");
     const {data: results } = useSWR(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`)
     const {base, clouds, cod, coord, dt, id, main, name, sys, timezone, visibility, weather, wind} = results;
 
+    const searchBarValues = {
+      setSearchValue: setLocation,
+      borderColor: "black",
+      inputColor: "black",
+      labelColor: "black",
+      focusedBorderColor: "black",
+      focusedInputColor: "black",
+      textValue: "Search Location",
+    }
     //console.log(data);
   return (
     <>
@@ -47,6 +56,7 @@ const Weather = () => {
       <Coordinates {...coord}/>
       <Clouds {...clouds} />
       <Wind {...wind} />
+      <SearchBar {...searchBarValues}/>
     </>
   )
 }

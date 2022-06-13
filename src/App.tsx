@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react';
-import './App.css';
 import {  fetcher } from './fetcher';
 import {SWRConfig} from "swr";
 import Weather from './Weather/Weather';
