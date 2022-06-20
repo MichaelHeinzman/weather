@@ -1,5 +1,5 @@
 import React from "react";
-import TextFormat from "../TextFormat";
+import TextFormat from "../Components/TextFormat";
 
 type Props = {
   lon: number;

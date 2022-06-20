@@ -1,5 +1,5 @@
 import React from "react";
-import TextFormat from "../TextFormat";
+import TextFormat from "../Components/TextFormat";
 import WeatherItem from "./WeatherItem";
 
 type item = {

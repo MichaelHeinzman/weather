@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import useSWR from "swr";
-import SearchBar from "../SearchBar";
-import TextFormat from "../TextFormat";
+import SearchBar from "../Components/SearchBar";
+import TextFormat from "../Components/TextFormat";
 import Clouds from "./Clouds";
 import Coordinates from "./Coordinates";
 import MainWeather from "./MainWeather";
